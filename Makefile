@@ -9,7 +9,7 @@ REMOTE_REPO ?= $(shell git config --get remote.${REMOTE_NAME}.url)
 CURR_HEAD   := $(firstword $(shell git show-ref --hash HEAD | cut -b -6) master)
 GITHUB_PROJ := nodeca/${NPM_PACKAGE}
 
-WASM_IMAGE  := nodeca/pica-toolchain
+WASM_IMAGE  := arodin/pica-toolchain
 WASM_RUN    := docker run --rm -v "$$PWD:/workdir" $(WASM_IMAGE)
 
 help:
